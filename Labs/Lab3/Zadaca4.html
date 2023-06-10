@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            margin: 5px;
+        }
+    </style>
+    <script>
+        class Book{
+            title
+            author
+            alreadyRead
+            constructor(t, a, read) {
+                this.title=t
+                this.author=a
+                this.alreadyRead=read
+            }
+        }
+        cars=[]
+
+        function addBook(){
+            var author=document.getElementById("author")
+            var title=document.getElementById("title")
+            newBook=new Book(title.value, author.value, true)
+            var tempr;
+            for (i = 0; i < cars.length; i++) {
+                if (tempr.title === title.value) {
+                    alert("You already read " + title.value + " by " + author.value)
+                    return
+                }
+            }
+            alert("test")
+            cars.push(newBook.title)
+            alert(cars)
+        }
+    </script>
+</head>
+<body>
+<h1>Add books to list</h1>
+<div>
+    <label>Enter title</label><input type="text" id="title">
+</div>
+<div>
+    <label>Enter author</label><input type="text" id="author">
+</div>
+
+<button onclick="addBook()">Add book</button>
+
+</body>
+</html>

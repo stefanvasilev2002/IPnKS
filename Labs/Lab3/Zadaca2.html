@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function removeElement(list, remove){
+            list=list.filter(i => i!==remove)
+            console.log(list)
+            alert(list)
+        }
+    </script>
+</head>
+<body>
+<button onclick="removeElement([1, 10, 3, 4, 5, 4, 4, 3, 5, 1, 2], 4)">Remove element</button>
+</body>
+</html>

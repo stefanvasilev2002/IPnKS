@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>About Me</title>
+    <script>
+        function submitForm(){
+
+            document.body.style.fontFamily = "Arial,Helvetica,sans-serif";
+
+            document.querySelectorAll("ul li").forEach(element => {
+                element.style.backgroundColor = "red";
+                element.querySelector("span").innerText =
+                    prompt(`Enter your ${element.innerText.replace(':', '').replace(/\s/g, '')}`);
+            });
+        }
+    </script>
+</head>
+<body>
+<h1>About Me</h1>
+<ul>
+    <li>Name: <span id="name"></span>
+    <li>Index: <span id="index"></span>
+    <li>Hometown: <span id="hometown"></span>
+    <button class="imigen" onclick="submitForm()"> Submit </button>
+</ul>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset=utf-8 />
+    <title>Title</title>
+    <script>
+        function removeColor(){
+            let valueSelected = document.querySelector("#colorSelect").value;
+
+            let options = document.querySelectorAll("#colorSelect option");
+
+            if(options.length > 1){
+                options.forEach(element => {
+                    if(element.value === valueSelected){ element.remove(); }
+                });
+            } else { alert("can't remove any more options"); }
+        }
+
+    </script>
+</head>
+<body><form>
+    <select id="colorSelect">
+        <option>Red</option>
+        <option>Green</option>
+        <option>White</option>
+        <option>Black</option>
+    </select>
+    <input type="button" onclick="removeColor()" value="Select and Remove"><br></form>
+</body>
+</html>

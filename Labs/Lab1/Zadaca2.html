@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        a=prompt("Vnesi mobilen broj")
+
+        if(a.length!=8){
+            alert("Ne e vnesen tocen mobilen broj")
+        }
+        else{
+            if(a.startsWith('70') || a.startsWith('71') || a.startsWith('72')){
+                alert("0"+a+" - T-Mobile")
+            }
+            else if(a.startsWith('75') || a.startsWith('76')){
+                alert("0"+a+" - One")
+            }
+            else if(a.startsWith('77') || a.startsWith('78')){
+                alert("0"+a+" - VIP")
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

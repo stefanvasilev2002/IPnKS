@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html><head>
+    <meta charset=utf-8 />
+    <title>Title</title>
+    <script>
+        let imageArray = [
+            "https://designmodo.com/wp-content/uploads/2014/07/free-photos.jpg",
+            "https://farm5.staticflickr.com/4060/4567292488_5d3f4b05f6_z.jpg",
+            "https://wallup.net/wp-content/uploads/2017/03/28/401266-landscape-road-forest-748x421.jpg"
+        ];
+
+        function getRandomInRange(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        document.querySelectorAll("button").forEach(button => {
+            button.addEventListener("click", () => {
+                let image = imageArray[getRandomInRange(0,2)];
+                let currImage = document.querySelector(".image").src;
+                while(image === currImage){ image = imageArray[getRandomInRange(0,2)]; }
+                document.querySelector(".image").src = image;
+            })
+        });
+    </script>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="image-container">
+        <img src="https://designmodo.com/wp-content/uploads/2014/07/free-photos.jpg" class="image">
+    </div>
+
+    <button class="imigen">
+        Random Image
+    </button>
+
+</div>
+
+<script type="text/javascript" src="./app.js"> </script>
+</body>
+</html>

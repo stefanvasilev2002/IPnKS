@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function add(){
+            var real1=document.getElementById("real1").value
+            var complex1=document.getElementById("complex1").value
+            var real2=document.getElementById("real2").value
+            var complex2=document.getElementById("complex2").value
+            var realA=document.getElementById("realA")
+            var complexA=document.getElementById("complexA")
+            var r=parseInt(real1)+parseInt(real2)
+            var c=parseInt(complex1)+parseInt(complex2)
+
+            complexA.value=c.toString()
+            realA.value=r.toString()
+        }
+    </script>
+    <style>
+        input{
+            margin: 5px;
+            width: 75px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <input type="text" id="real1">
+    <input type="text" id="complex1">
+    <label>i</label>
+</div>
+<div>
+    <input type="text" id="real2">
+    <input type="text" id="complex2">
+    <label>i</label>
+</div>
+<div>
+    <button onclick="add()">Add</button>
+</div>
+<div>
+    <input type="text" id="realA">
+    <input type="text" id="complexA">
+    <label>i</label>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            margin: 5px;
+        }
+    </style>
+  <script>
+      class Cylinder{
+          constructor(radius, height) {
+              var result=Math.PI*radius*radius*height
+              alert("Volume of the cylinder is: "+result.toFixed(2))
+          }
+
+      }
+      function calculateVolume() {
+            var radius=document.getElementById("radius")
+            var height=document.getElementById("height")
+             new Cylinder(parseFloat(radius.value),parseFloat(height.value))
+      }
+  </script>
+</head>
+<body>
+<h1>Volume of cylinder calculator</h1>
+<div>
+    <label>Enter radius</label><input type="text" id="radius">
+</div>
+<div>
+    <label>Enter height</label><input type="text" id="height">
+</div>
+<button onclick="calculateVolume()">Calculate volume of cylinder</button>
+</body>
+</html>

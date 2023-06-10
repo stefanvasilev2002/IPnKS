@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Zadaca 4</title>
+    <script>
+        a=prompt("Vnesi prv broj")
+        b=prompt("Vnesi vtor broj")
+        c=prompt("Vnesi tret broj")
+        a=parseInt(a)
+        b=parseInt(b)
+        c=parseInt(c)
+        if(!isNaN(a) && !isNaN(b) && !isNaN(c)){
+            d=a*b*c
+            if(d<0){
+                alert("Znakot na proizvodot e "+'-')
+            }
+            else if(d>0){
+                alert("Znakot na proizvodot e "+'+')
+            }
+            else{
+                alert("Proizvodot e 0")
+            }
+        }
+        else{
+            alert("Ne se vneseni broevi")
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

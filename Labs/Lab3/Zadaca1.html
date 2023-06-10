@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function noDuplicates(list){
+            list=Array.from(new Set(list))
+            console.log(list)
+            alert(list)
+        }
+    </script>
+</head>
+<body>
+<button onclick="noDuplicates([1, 10, 3, 4, 4, 4, 4, 3, 5, 1, 2])">Remove duplicates</button>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        a=prompt("Vnesi tricifren broj");
+        b=a
+        b=parseInt(b)
+        if(isNaN(b)){
+            alert("Ne e vnesen broj")
+        }
+        else if(!isNaN(b) && a.length===3){
+            if(a[0]===a[2]){
+                alert("Brojot e palindrom")
+            }
+            else {
+                alert("Brojot ne e palindrom")
+            }
+        }
+        else {
+            alert("Brojot ne e tricifren")
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>
